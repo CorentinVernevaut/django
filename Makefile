@@ -15,3 +15,9 @@ sqlmigrate : ## Prints the SQL for the named migration
 
 check : ## Checks for any problems in your project
 	docker-compose run --rm web python manage.py check
+
+shell : ## Invoke the python shell
+	docker-compose run --rm web python manage.py shell
+
+superUser : ## Create super user
+	docker-compose run --rm web python manage.py createsuperuser
