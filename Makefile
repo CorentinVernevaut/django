@@ -21,3 +21,6 @@ shell : ## Invoke the python shell
 
 superUser : ## Create super user
 	docker-compose run --rm web python manage.py createsuperuser
+
+tests : ## Running tests
+	docker-compose run --rm web python manage.py test polls
